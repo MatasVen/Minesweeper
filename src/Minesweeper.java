@@ -29,8 +29,15 @@ class Minesweeper
         Grid grid = new Grid(difficulty);
 
         grid.populateGridMines();
-
-
+        Tile[][] gameGrid = grid.getGameGrid();
+        for (int i=0; i< gameGrid[0].length; i++)
+        {
+            System.out.println("");
+            for (int j = 0; j<gameGrid.length; j++)
+            {
+                System.out.print("x ");
+            }
+        }
         scanner.close();
         return;
     }
